@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emile
+  name: knew
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: emile
+      app: knew
   template:
     metadata:
       labels:
-        app: emile
+        app: knew
     spec:
       containers:
-      - image: okteto.dev/emile:latest
-        name: emile
+      - image: okteto.dev/knew:latest
+        name: knew
         ports:
         - containerPort: 8080
         env:
