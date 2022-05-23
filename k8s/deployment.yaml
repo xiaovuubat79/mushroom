@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: color
+  name: emile
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: color
+      app: emile
   template:
     metadata:
       labels:
-        app: color
+        app: emile
     spec:
       containers:
-      - image: okteto.dev/color:latest
-        name: color
+      - image: okteto.dev/emile:latest
+        name: emile
         ports:
         - containerPort: 8080
         env:
