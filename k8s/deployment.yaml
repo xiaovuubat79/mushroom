@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: each
+  name: flavor
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: each
+      app: flavor
   template:
     metadata:
       labels:
-        app: each
+        app: flavor
     spec:
       containers:
-      - image: okteto.dev/each:latest
-        name: each
+      - image: okteto.dev/flavor:latest
+        name: flavor
         ports:
         - containerPort: 8080
         env:
